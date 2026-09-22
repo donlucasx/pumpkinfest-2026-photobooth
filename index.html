@@ -19,14 +19,14 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&family=Archivo:wght@400;500;600&display=swap">
 <style>
 :root{
-  --ink:#060606; --riser:#121212; --edge:#2a2a2a;
-  --white:#f4f4f4; --grey:#a3a3a3; --yellow:#fabc29; --yellow-lo:#9c7414;
+  --bg:#f6f2ea; --riser:#fffdf8; --edge:#d8d0c0;
+  --fg:#161513; --grey:#6a645c; --yellow:#fabc29; --yellow-lo:#c9962a; --accent:#8a6710;
   --display:"Caesar Dressing","Copperplate",Georgia,serif;
   --ui:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
-  color-scheme:dark;
+  color-scheme:light;
 }
 *{box-sizing:border-box}
-body{background:var(--ink);color:var(--white);font-family:var(--ui);font-size:16px;line-height:1.6;
+body{background:var(--bg);color:var(--fg);font-family:var(--ui);font-size:16px;line-height:1.6;
   margin:0;padding-inline:24px;padding-block:0 64px}
 .wrap{max-width:1220px;margin:0 auto}
 
@@ -34,86 +34,87 @@ body{background:var(--ink);color:var(--white);font-family:var(--ui);font-size:16
 .masthead>div{display:flex;flex-direction:column;align-items:center;width:100%}
 .mark{width:clamp(150px,20vw,230px);height:auto;display:block}
 .eyebrow{font-family:var(--display);font-size:clamp(14px,1.6vw,19px);letter-spacing:.12em;text-transform:uppercase;
-  color:var(--yellow);margin:0 0 10px;line-height:1.3}
+  color:var(--accent);margin:0 0 10px;line-height:1.3}
 h1{font-family:var(--display);font-weight:400;font-size:clamp(46px,8.5vw,96px);line-height:.98;margin:0;
-  text-wrap:balance;letter-spacing:.02em;text-transform:uppercase;color:var(--white)}
+  text-wrap:balance;letter-spacing:.02em;text-transform:uppercase;color:var(--fg)}
 .sub{font-family:var(--display);font-size:clamp(20px,3vw,34px);letter-spacing:.14em;text-transform:uppercase;
-  color:var(--yellow);margin:8px 0 0;line-height:1.2}
+  color:var(--accent);margin:8px 0 0;line-height:1.2}
 .standfirst{font-size:17px;color:var(--grey);max-width:62ch;margin:16px auto 0;text-wrap:balance}
-.standfirst b{color:var(--white);font-weight:500}
+.standfirst b{color:var(--fg);font-weight:500}
 .facts{display:flex;flex-wrap:wrap;margin:26px 0 0;border:1px solid var(--edge);overflow:hidden;width:100%;max-width:980px;text-align:left}
 .fact{flex:1 1 190px;padding:13px 18px;border-right:1px solid var(--edge);background:var(--riser)}
 .fact:last-child{border-right:0}
-.fact dt{font-family:var(--display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin:0 0 4px}
+.fact dt{font-family:var(--display);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 4px}
 .fact dd{margin:0;font-size:15px;font-weight:500}
 
 .albums{margin:26px 0 0;font-size:17px;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:baseline;justify-content:center}
 .albums-label{font-family:var(--display);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
-.albums a{color:var(--yellow);text-decoration:none;border-bottom:1px solid var(--yellow-lo);padding-bottom:1px}
-.albums a:hover{border-bottom-color:var(--yellow)}
-.albums a:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
-.meander{color:var(--white);opacity:.55;margin:30px 0 0;line-height:0}
+.albums a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--yellow);padding-bottom:1px}
+.albums a:hover{border-bottom-color:var(--accent)}
+.albums a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.meander{color:var(--accent);opacity:.5;margin:30px 0 0;line-height:0}
 section{padding-block:34px 8px}
 h2{font-family:var(--display);font-weight:400;font-size:clamp(28px,4vw,44px);line-height:1.1;margin:0 0 18px;
-  text-wrap:balance;text-transform:uppercase;letter-spacing:.03em;color:var(--yellow)}
+  text-wrap:balance;text-transform:uppercase;letter-spacing:.03em;color:var(--accent)}
 .lede{margin:-8px 0 24px;color:var(--grey);max-width:64ch}
 
 figure{margin:0}
-figure button{padding:0;margin:0;border:1px solid var(--edge);background:var(--riser);overflow:hidden;
+figure button{padding:0;margin:0;border:1px solid var(--edge);background:var(--riser);overflow:hidden;box-shadow:0 1px 3px rgba(40,30,10,.08);
   cursor:zoom-in;display:block;line-height:0;width:100%;transition:border-color .15s}
 figure img{width:100%;height:auto;display:block;max-width:100%}
 figure button:hover{border-color:var(--yellow)}
-figure button:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+figure button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 figcaption{font-size:13px;color:var(--grey);margin-top:8px;line-height:1.4}
 .hero{margin:0}
 .hero button{border-color:var(--yellow-lo)}
-.hero figcaption{font-size:15px;color:var(--white);margin-top:12px}
+.hero figcaption{font-size:15px;color:var(--fg);margin-top:12px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px 14px}
 
 #lb{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.96);display:flex;align-items:center;justify-content:center;padding:20px}
 #lb[hidden]{display:none!important}
 #lbimg{max-width:100%;max-height:calc(100vh - 132px);object-fit:contain;display:block}
 .lbbar{position:absolute;left:0;right:0;bottom:0;padding:18px 24px;display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap}
-.lbcap{font-size:14px;color:var(--white)}
+.lbcap{font-size:14px;color:#f4f4f4}
 .lbnum{font-size:13px;color:var(--grey);font-variant-numeric:tabular-nums}
-.lbbtn{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid var(--edge);
-  background:rgba(18,18,18,.92);color:var(--white);font-size:22px;cursor:pointer;line-height:1}
+.lbbtn{position:absolute;top:50%;transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:1px solid #2a2a2a;
+  background:rgba(18,18,18,.92);color:#f4f4f4;font-size:22px;cursor:pointer;line-height:1}
 .lbbtn:hover{border-color:var(--yellow);color:var(--yellow)}
-.lbbtn:focus-visible{outline:2px solid var(--yellow);outline-offset:2px}
+.lbbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 #lbprev{left:16px} #lbnext{right:16px}
-#lbclose{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:1px solid var(--edge);
-  background:rgba(18,18,18,.92);color:var(--white);font-size:20px;cursor:pointer;line-height:1}
+#lbclose{position:absolute;top:16px;right:16px;width:44px;height:44px;border-radius:50%;border:1px solid #2a2a2a;
+  background:rgba(18,18,18,.92);color:#f4f4f4;font-size:20px;cursor:pointer;line-height:1}
 #lbclose:hover{border-color:var(--yellow);color:var(--yellow)}
-#lbclose:focus-visible{outline:2px solid var(--yellow);outline-offset:2px}
+#lbclose:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
-dl.build{margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px 22px}
-.bi dt{font-family:var(--display);font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--yellow);margin:0 0 2px}
-.bi dd{margin:0;font-size:14px;color:var(--white);line-height:1.5}
+dl.build{margin:0;display:grid;grid-template-columns:1fr;gap:22px}
+.bi dt{font-family:var(--display);font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 2px}
+.bi dd{margin:0;font-size:14px;color:var(--fg);line-height:1.5}
 .bi .src{display:block;color:var(--grey);font-size:13px;margin-top:2px}
-.bi.has-img{grid-column:1/-1}
-.refs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px 8px;margin-top:12px}
+.refs{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px 10px;margin-top:12px}
 .ref img{aspect-ratio:4/3;object-fit:cover}
 .ref figcaption{font-size:12px;margin-top:5px}
+.ref figcaption a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--edge)}
+.ref figcaption a:hover{border-bottom-color:var(--accent)}
 .bds{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
 .bd{display:block;text-decoration:none;color:var(--grey);font-size:12px;line-height:1.3;border:1px solid var(--edge);padding:4px;background:var(--riser)}
 .bd img{width:100%;height:auto;display:block;aspect-ratio:5/3;object-fit:cover}
 .bd span{display:block;padding:5px 2px 1px}
-.bd:hover{border-color:var(--yellow);color:var(--yellow)}
-.bd:focus-visible{outline:2px solid var(--yellow);outline-offset:2px}
+.bd:hover{border-color:var(--yellow);color:var(--accent)}
+.bd:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:999px;text-decoration:none;
   font-weight:600;font-size:15px;color:#fff;border:1px solid transparent;transition:filter .15s}
 .btn:hover{filter:brightness(1.1)}
-.btn:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .btn.wa{background:#25d366;color:#062d17}
 .btn.gs{background:#1e8e3e}
 section.small h2{font-size:clamp(20px,2.6vw,26px)}
 section.small .lede{font-size:14px}
 .links-sec{text-align:center}
 footer{padding-top:36px;text-align:center;color:var(--grey);font-size:15px}
-footer .orn{width:min(300px,70vw);height:auto;display:block;margin:0 auto;opacity:.9}
+footer .orn{width:min(300px,70vw);height:auto;display:block;margin:0 auto;opacity:.8}
 footer p{max-width:60ch;margin:0 auto}
-footer b{color:var(--white);font-weight:500}
+footer b{color:var(--fg);font-weight:500}
 @media (max-width:640px){
   .mark{width:150px}
   .lbbtn{width:44px;height:44px;font-size:18px}#lbprev{left:8px}#lbnext{right:8px}
@@ -123,13 +124,13 @@ footer b{color:var(--white);font-weight:500}
 </head><body>
 <div class="wrap">
 <header class="masthead">
-  <img class="mark" src="img/eagle.png" width="361" height="441" alt="The Micheltorena eagle with Medusa's snakes for hair, the Pumpkin Fest 2026 mark">
+  <img class="mark" src="img/eagle-dark.png" width="361" height="441" alt="The Micheltorena eagle with Medusa's snakes for hair, the Pumpkin Fest 2026 mark">
   <div>
   <p class="eyebrow">Micheltorena Pumpkinfest 2026</p>
   <h1>Gates of Olympus</h1>
   <p class="sub">Photobooth</p>
   <p class="standfirst"><b>A throne on a mountaintop, columns around it, clouds at its feet.</b> Built on the
-  auditorium stage from cardboard, burlap, pillow stuffing and paint. The renders are concepts, not photos.</p>
+  auditorium stage from cardboard, burlap, pillow stuffing and paint. Concept renders, not photos.</p>
   <dl class="facts">
     <div class="fact"><dt>Where</dt><dd>The auditorium stage</dd></div>
     <div class="fact"><dt>Budget</dt><dd>DIY, no budget</dd></div>
@@ -159,15 +160,15 @@ footer b{color:var(--white);font-weight:500}
 <div class="meander" aria-hidden="true"><svg width="100%" height="18" preserveAspectRatio="none"><defs><pattern id="mk" width="26" height="18" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 13 V5 H13 V11 H8 V8 H10" fill="none" stroke="currentColor" stroke-width="1.6"/></pattern></defs><rect width="100%" height="18" fill="url(#mk)"/></svg></div>
 <section>
   <h2>Build details</h2>
-  <p class="lede">The bolt is cardboard over a dowel, sprayed gold. The columns are cardboard tubes painted as marble.</p>
+  <p class="lede">Bolt: cardboard over a dowel, sprayed gold. Columns: cardboard tubes painted as marble.</p>
   <div class="grid"><figure class="frame"><button data-cap="Bolt shapes" aria-label="Enlarge: Bolt shapes"><img src="img/43-bolt-lineup_1-1344.webp" width="1344" height="896" loading="lazy" decoding="async" alt="Bolt shapes"></button><figcaption>Bolt shapes</figcaption></figure><figure class="frame"><button data-cap="Bolt build" aria-label="Enlarge: Bolt build"><img src="img/45-bolt-build-wip_2-1344.webp" width="1344" height="896" loading="lazy" decoding="async" alt="Bolt build"></button><figcaption>Bolt build</figcaption></figure><figure class="frame"><button data-cap="Finished bolt" aria-label="Enlarge: Finished bolt"><img src="img/46-bolt-finished_2-1344.webp" width="1344" height="896" loading="lazy" decoding="async" alt="Finished bolt"></button><figcaption>Finished bolt</figcaption></figure><figure class="frame"><button data-cap="Marble paint, gold capitals" aria-label="Enlarge: Marble paint, gold capitals"><img src="img/9-zb-detail_1-1344.webp" width="1344" height="896" loading="lazy" decoding="async" alt="Marble paint, gold capitals"></button><figcaption>Marble paint, gold capitals</figcaption></figure><figure class="frame"><button data-cap="Marble paint, gold capitals" aria-label="Enlarge: Marble paint, gold capitals"><img src="img/9-zb-detail_2-1344.webp" width="1344" height="896" loading="lazy" decoding="async" alt="Marble paint, gold capitals"></button><figcaption>Marble paint, gold capitals</figcaption></figure><figure class="frame"><button data-cap="Marble paint, gold capitals" aria-label="Enlarge: Marble paint, gold capitals"><img src="img/9-zb-detail_3-1344.webp" width="1344" height="896" loading="lazy" decoding="async" alt="Marble paint, gold capitals"></button><figcaption>Marble paint, gold capitals</figcaption></figure></div>
 </section>
 
 <div class="meander" aria-hidden="true"><svg width="100%" height="18" preserveAspectRatio="none"><defs><pattern id="mk" width="26" height="18" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 13 V5 H13 V11 H8 V8 H10" fill="none" stroke="currentColor" stroke-width="1.6"/></pattern></defs><rect width="100%" height="18" fill="url(#mk)"/></svg></div>
 <section>
   <h2>How we build it</h2>
-  <p class="lede">The plan so far, with ideas from the parent community. Each piece is a job someone can take.</p>
-  <dl class="build"><div class="bi"><dt>Backdrop</dt><dd>A canvas drop cloth, 12 by 20 ft or bigger, painted by Ben Wilson: a mountain top under dramatic clouds. It stands on its own frame in front of the black curtain. Nothing hangs from the stage. <span class="src">Drop cloth from a paint or hardware store. Paint and spray paint.</span></dd></div><div class="bi"><dt>The summit</dt><dd>The throne sits on our three pallets, stacked, screwed together and decked with plywood. Cardboard shapes the rock, burlap goes over it, paint makes it stone. Three solid steps up the front so kids can climb on. <span class="src">Pallets in hand. Plywood, burlap and screws from EcoSet or a hardware store.</span></dd></div><div class="bi"><dt>Mountain peaks</dt><dd>Tall peaks to each side: cardboard volumes skinned in burlap, sackcloth or paper mache, then painted and spray painted as rock. Smaller flat peaks near the camera, out of focus, to frame the shot. <span class="src">Appliance and furniture boxes. Burlap or sackcloth. Newspaper and glue.</span></dd></div><div class="bi"><dt>Clouds</dt><dd>Pillow stuffing, lots of it. Chicken wire or draped sheets give the shape. The stuffing goes over the top. Clouds around the foot of the summit and along the front of the stage, fog behind. <span class="src">Old pillows and comforters from families, Buy Nothing, thrift. Chicken wire from a hardware store.</span></dd></div><div class="bi"><dt>Columns</dt><dd>At least two, ideally four, either side of the summit. Cardboard tubes or rolled cardboard on a wood base, painted as marble. Maybe two small ones right by the camera, for depth. <span class="src">Carpet and concrete-form tubes. EcoSet. Appliance-store cardboard.</span></dd></div><div class="bi"><dt>Throne and urns</dt><dd>A high-back chair sprayed gold, screwed to the summit. Two big urns with olive trees either side of the steps: planters painted stone, branches sprayed grey-green. Also worth building: a gold eagle on a column, torches with LED flame, laurel garlands on the columns. <span class="src">Thrift and Buy Nothing for the chair and planters. Fake branches, gold spray.</span></dd></div><div class="bi"><dt>Hand props</dt><dd>Things to grab and pose with. The bolt, the trident, the golden apple, laurel wreaths, a giant mallet, a scythe. More if they come easy: Medusa&#x27;s head, a lyre, a bow, a gold shield, a winged helmet, a golden fleece. <span class="src">Cardboard, foam board, pool noodles, dowels. Gold and silver spray. Dollar Tree ivy.</span></dd></div></dl>
+  <p class="lede">Ideas from the parent community. Each piece is a job someone can take.</p>
+  <dl class="build"><div class="bi has-img"><dt>Backdrop</dt><dd>A 12 by 20 ft canvas drop cloth, painted by Ben Wilson: mountain top, dramatic clouds. Stands on its own frame. <span class="src">Drop cloth, paint, spray paint.</span><div class="refs"><figure class="ref"><button data-cap="Painted mountain flats" aria-label="Enlarge: Painted mountain flats"><img src="img/backdrop-01-painted-mountain-flats-1344.webp" width="720" height="543" loading="lazy" decoding="async" alt="Painted mountain flats"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100587/" target="_blank" rel="noopener">Painted mountain flats</a></figcaption></figure></div></dd></div><div class="bi"><dt>The summit</dt><dd>Our three pallets, stacked and decked, dressed as rock. Three steps up the front for the kids. <span class="src">Pallets in hand. Plywood, burlap, paint.</span></dd></div><div class="bi has-img"><dt>Mountain peaks</dt><dd>Cardboard shapes skinned in burlap or paper mache, painted as rock. Tall ones to the sides, small flat ones near the camera. <span class="src">Big boxes, burlap, newspaper, glue.</span><div class="refs"><figure class="ref"><button data-cap="Paper peaks on a stage" aria-label="Enlarge: Paper peaks on a stage"><img src="img/peaks-01-paper-peaks-on-a-stage-1344.webp" width="1000" height="1334" loading="lazy" decoding="async" alt="Paper peaks on a stage"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100586/" target="_blank" rel="noopener">Paper peaks on a stage</a></figcaption></figure><figure class="ref"><button data-cap="Carved cardboard rock" aria-label="Enlarge: Carved cardboard rock"><img src="img/peaks-02-carved-cardboard-rock-1344.webp" width="1344" height="1008" loading="lazy" decoding="async" alt="Carved cardboard rock"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100541/" target="_blank" rel="noopener">Carved cardboard rock</a></figcaption></figure><figure class="ref"><button data-cap="Draped fabric painted" aria-label="Enlarge: Draped fabric painted"><img src="img/peaks-03-draped-fabric-painted-1344.webp" width="736" height="736" loading="lazy" decoding="async" alt="Draped fabric painted"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100539/" target="_blank" rel="noopener">Draped fabric painted</a></figcaption></figure><figure class="ref"><button data-cap="Crumpled paper wall" aria-label="Enlarge: Crumpled paper wall"><img src="img/peaks-04-crumpled-paper-wall-1344.webp" width="1344" height="1008" loading="lazy" decoding="async" alt="Crumpled paper wall"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100585/" target="_blank" rel="noopener">Crumpled paper wall</a></figcaption></figure></div></dd></div><div class="bi has-img"><dt>Clouds</dt><dd>Pillow stuffing over chicken wire, sheets or paper lanterns. Around the summit and along the front, fog behind. <span class="src">Old pillows and comforters. Chicken wire.</span><div class="refs"><figure class="ref"><button data-cap="Lantern and stuffing" aria-label="Enlarge: Lantern and stuffing"><img src="img/clouds-01-lantern-and-stuffing-1344.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="Lantern and stuffing"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100580/" target="_blank" rel="noopener">Lantern and stuffing</a></figcaption></figure><figure class="ref"><button data-cap="Hung clouds on blue" aria-label="Enlarge: Hung clouds on blue"><img src="img/clouds-02-hung-clouds-on-blue-1344.webp" width="895" height="1200" loading="lazy" decoding="async" alt="Hung clouds on blue"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640090625/" target="_blank" rel="noopener">Hung clouds on blue</a></figcaption></figure><figure class="ref"><button data-cap="Stuffing cloud bank" aria-label="Enlarge: Stuffing cloud bank"><img src="img/clouds-03-stuffing-cloud-bank-1344.webp" width="736" height="552" loading="lazy" decoding="async" alt="Stuffing cloud bank"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100537/" target="_blank" rel="noopener">Stuffing cloud bank</a></figcaption></figure><figure class="ref"><button data-cap="Small set clouds" aria-label="Enlarge: Small set clouds"><img src="img/clouds-04-small-set-clouds-1344.webp" width="1080" height="1920" loading="lazy" decoding="async" alt="Small set clouds"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100578/" target="_blank" rel="noopener">Small set clouds</a></figcaption></figure><figure class="ref"><button data-cap="Cloud lantern" aria-label="Enlarge: Cloud lantern"><img src="img/clouds-05-cloud-lantern-1344.webp" width="720" height="1280" loading="lazy" decoding="async" alt="Cloud lantern"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100583/" target="_blank" rel="noopener">Cloud lantern</a></figcaption></figure><figure class="ref"><button data-cap="Lit cloud box" aria-label="Enlarge: Lit cloud box"><img src="img/clouds-06-lit-cloud-box-1344.webp" width="735" height="519" loading="lazy" decoding="async" alt="Lit cloud box"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100579/" target="_blank" rel="noopener">Lit cloud box</a></figcaption></figure></div></dd></div><div class="bi"><dt>Columns</dt><dd>Two at least, four ideally, plus two small ones by the camera. Cardboard tubes painted as marble. <span class="src">Carpet tubes, EcoSet, appliance boxes.</span></dd></div><div class="bi has-img"><dt>Throne and urns</dt><dd>A high-back chair sprayed gold. Two urns with olive trees by the steps. Maybe a gold eagle, torches, garlands. <span class="src">Thrift, Buy Nothing, fake branches, gold spray.</span><div class="refs"><figure class="ref"><button data-cap="Gold throne chair" aria-label="Enlarge: Gold throne chair"><img src="img/throne-urns-01-gold-throne-chair-1344.webp" width="600" height="800" loading="lazy" decoding="async" alt="Gold throne chair"></button><figcaption><a href="https://www.facebook.com/marketplace/item/1403026565258746/" target="_blank" rel="noopener">Gold throne chair</a></figcaption></figure><figure class="ref"><button data-cap="Tufted wingback" aria-label="Enlarge: Tufted wingback"><img src="img/throne-urns-02-tufted-wingback-1344.webp" width="600" height="800" loading="lazy" decoding="async" alt="Tufted wingback"></button><figcaption><a href="https://www.facebook.com/marketplace/item/2468503043561169/" target="_blank" rel="noopener">Tufted wingback</a></figcaption></figure><figure class="ref"><button data-cap="Carved armchair" aria-label="Enlarge: Carved armchair"><img src="img/throne-urns-03-carved-armchair-1344.webp" width="600" height="800" loading="lazy" decoding="async" alt="Carved armchair"></button><figcaption><a href="https://www.facebook.com/marketplace/item/1520964756012808/" target="_blank" rel="noopener">Carved armchair</a></figcaption></figure></div></dd></div><div class="bi has-img"><dt>Hand props</dt><dd>To grab and pose with: bolt, trident, golden apple, laurel wreath, giant mallet, scythe. Easy extras: Medusa&#x27;s head, lyre, bow, shield, winged helmet. <span class="src">Cardboard, foam, dowels, gold spray.</span><div class="refs"><figure class="ref"><button data-cap="Bolt in a cloud" aria-label="Enlarge: Bolt in a cloud"><img src="img/hand-props-01-bolt-in-a-cloud-1344.webp" width="1344" height="1680" loading="lazy" decoding="async" alt="Bolt in a cloud"></button><figcaption><a href="https://www.pinterest.com/pin/128211920640100582/" target="_blank" rel="noopener">Bolt in a cloud</a></figcaption></figure></div></dd></div></dl>
 </section>
 
 <div class="meander" aria-hidden="true"><svg width="100%" height="18" preserveAspectRatio="none"><defs><pattern id="mk" width="26" height="18" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 13 V5 H13 V11 H8 V8 H10" fill="none" stroke="currentColor" stroke-width="1.6"/></pattern></defs><rect width="100%" height="18" fill="url(#mk)"/></svg></div>
@@ -180,7 +181,7 @@ footer b{color:var(--white);font-weight:500}
 <div class="meander" aria-hidden="true"><svg width="100%" height="18" preserveAspectRatio="none"><defs><pattern id="mk" width="26" height="18" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 13 V5 H13 V11 H8 V8 H10" fill="none" stroke="currentColor" stroke-width="1.6"/></pattern></defs><rect width="100%" height="18" fill="url(#mk)"/></svg></div>
 <section class="small">
   <h2>Backdrop inspo</h2>
-  <p class="lede">Painting reference for our backdrop. Also for rent from Schmidli Backdrops. Click one to see it.</p>
+  <p class="lede">Painting reference. Also for rent from Schmidli Backdrops.</p>
   <div class="bds"><a class="bd" href="https://www.schmidli.com/backdrop/s418/" target="_blank" rel="noopener"><img src="img/s418-480.webp" width="480" height="243" loading="lazy" alt="Schmidli backdrop S418"><span>S418 &middot; 20 x 39.5 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s260/" target="_blank" rel="noopener"><img src="img/s260-480.webp" width="480" height="210" loading="lazy" alt="Schmidli backdrop S260"><span>S260 &middot; 16 x 36.5 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s503d/" target="_blank" rel="noopener"><img src="img/s503d-480.webp" width="480" height="246" loading="lazy" alt="Schmidli backdrop S503D"><span>S503D &middot; 14.5 x 29.5 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s151/" target="_blank" rel="noopener"><img src="img/s151-480.webp" width="480" height="288" loading="lazy" alt="Schmidli backdrop S151"><span>S151 &middot; 12 x 20 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s538/" target="_blank" rel="noopener"><img src="img/s538-480.webp" width="480" height="288" loading="lazy" alt="Schmidli backdrop S538"><span>S538 &middot; 12 x 20 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s019/" target="_blank" rel="noopener"><img src="img/s019-480.webp" width="480" height="288" loading="lazy" alt="Schmidli backdrop S019"><span>S019 &middot; 12 x 20 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s149/" target="_blank" rel="noopener"><img src="img/s149-480.webp" width="480" height="288" loading="lazy" alt="Schmidli backdrop S149"><span>S149 &middot; 12 x 20 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s175/" target="_blank" rel="noopener"><img src="img/s175-480.webp" width="480" height="288" loading="lazy" alt="Schmidli backdrop S175"><span>S175 &middot; 12 x 20 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s357/" target="_blank" rel="noopener"><img src="img/s357-480.webp" width="480" height="288" loading="lazy" alt="Schmidli backdrop S357"><span>S357 &middot; 12 x 20 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s705d/" target="_blank" rel="noopener"><img src="img/s705d-480.webp" width="480" height="381" loading="lazy" alt="Schmidli backdrop S705D"><span>S705D &middot; 11.5 x 14.5 ft</span></a><a class="bd" href="https://www.schmidli.com/backdrop/s023c/" target="_blank" rel="noopener"><img src="img/s023c-480.webp" width="480" height="360" loading="lazy" alt="Schmidli backdrop S023C"><span>S023C &middot; 9 x 12 ft</span></a></div>
 </section>
 
@@ -192,7 +193,7 @@ footer b{color:var(--white);font-weight:500}
 
 <div class="meander" aria-hidden="true"><svg width="100%" height="18" preserveAspectRatio="none"><defs><pattern id="mk" width="26" height="18" patternUnits="userSpaceOnUse"><rect x="1" y="1" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 13 V5 H13 V11 H8 V8 H10" fill="none" stroke="currentColor" stroke-width="1.6"/></pattern></defs><rect width="100%" height="18" fill="url(#mk)"/></svg></div>
 <footer>
-  <img class="orn" src="img/laurel-temple.png" width="342" height="72" alt="">
+  <img class="orn" src="img/laurel-temple-dark.png" width="342" height="72" alt="">
 </footer>
 </div>
 
